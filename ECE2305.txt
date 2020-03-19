@@ -1,0 +1,81 @@
+import wiringpi
+import serial
+import time
+
+
+
+wiringpi.wiringPiSetupGpio()
+wiringpi.pinMode(18, 1)
+
+wiringpi.digitalWrite(18, 0)
+
+hc12 = serial.Serial(
+        port='/dev/serial0',
+        baudrate = 9600,
+        timeout =  1
+    )
+print("serial device setup")
+time.sleep(1)
+
+#print(" IN Bytes waiting: " + str(hc12.in_waiting) +" OUT Bytes waiting: " + str(hc12.out_waiting))
+
+if hc12.is_open:
+        hc12.write("AT")
+        #hc12.write(b'AT')
+        print("done writing")
+        output = hc12.readline()
+        print('response: ' + str(output) + '\t' + 'length: ' + str(len(output)))
+
+
+        hc12.write("AT+C001")
+        #hc12.write(b'AT')
+        print("done writing")
+        output = hc12.readline()
+        print('response: ' + str(output) + '\t' + 'length: ' + str(len(output)))
+        wiringpi.digitalWrite(18,1)
+
+        mac_str = "be:81:b4:9f:d6:9e|"
+        passwd_str = "hoUq16wco8h0mH1W|"
+        mystery_ip = "167.251.78.6|"
+        #mac_bytes = bytearray([0xbe,0x81,0xb4,0x9f,0xd6,0x9e])
+        #passwd_bytes = b'hoUq16wco8h0mH1W'
+        #mystery_ip_bytes = bytearray([167,251,78,6])
+        #mystery_ip_bytes = b'167.251.78.6'
+
+        tx_string = mystery_ip + mac_str  + passwd_str
+        #tx_string2 = mac_str + passwd_str
+        #tx_bytes = mac_str + '|' + passwd_str
+        print("sending: " + str(tx_string))
+#       hc12.write(tx_string.encode("ASCII","ignore"))
+        #hc12.write(tx_bytes)
+        #hc12.write(sys.argv[1].encode("ASCII","ignore"))
+        #while(True):
+#       print("sending: " + str(tx_string))
+
+
+        #while(True):
+        #time.sleep(1)
+        hc12.write(str(tx_string))
+        time.sleep(1)
+        #hc12.write(tx_string2)
+        response = hc12.readline()
+        while(len(response) <= 1 or len(response) > 12):
+                hc12.write(str(tx_string))
+                #time.sleep(.5)
+                #hc12.write(tx_string2)
+                response = hc12.readline()
+
+        print("response: " + str(response) +str(len(response)))
+
+        #start_time = time.time()
+        #while(time.time() - start_time < 6):
+        #       response = hc12.readline()
+        #       #response = hc12.read(300)
+        #       #print("response: " + response +"\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        #               #print([hex(ord(n)) for n in response])
+        #       print("response: " + str(response) +"\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        #       print([int(n) for n in response])
+        hc12.close()
+else:
+        print("did not open port")
+

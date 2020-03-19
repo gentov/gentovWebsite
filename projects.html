@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+		#nav {
+		width:900px;
+		margin:0 auto;
+		list-style:none;
+		}
+		#nav li {
+		float:left;
+		}
+		#nav a {
+		display:block;
+		text-align:center;
+		width:150px; /* fixed width */
+		text-decoration:none; 
+		}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a person website for
+      Gabriel Entov">
+    <title>Gabriel Entov's Website</title>
+  </head>
+  <body>
+    <header>
+      <hr>
+      <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://www.linkedin.com/in/about-gabriel-entov"
+            target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/gentov" target="_blank">GitHub</a></li>
+        <li><a href="resume.pdf">Resume</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+      <br>
+      <hr> </header>
+    <!-- IQP, MQP, RBE Curriculum, AI Proj, Soft-Eng, AI Parking, IdEAS, Path Planning Visualizer, Clapper-->
+    <main>
+      <!-- MQP -->
+      <section>
+        <h3> Kinisi: A Platform for Autonomizing Off-Road Vehicles </h3>
+        <article> For my engineering capstone, I worked on autonomizing
+          an off-road baja vehicle. I developed the entire electrical
+          system and all of the embedded software for the vehicle. I
+          developed the communication network between nodes responsible
+          for actuating the vehicle. I also helped develop the decision
+          making algorithms, leveraging data fusion and computer vision
+          to help the vehicle navigate. I also developed some of the
+          mechanical system that gave the embedded system feedback as to
+          where the steering was. The autonomous system can be turned
+          off, and the vehicle retains full human driving operability as
+          well as steering and braking capabilities. The long-term goal
+          of this project, outside of the scope of this team’s one year
+          timeline, was for the baja vehicle to be able to navigate
+          through off road terrain in order to rescue and provide aid to
+          a distressed individual. The project took home first place in
+          the Electrical and Computer Engineering departments judging of
+          capstone projects! You can find the entire report <a
+href="KINISI/Kinisi_%20A%20Platform%20for%20Autonomizing%20Off-Road%20Vehicles.pdf">here</a>.<br>
+          <br>
+          <div align="center"><img src="KINISI/meMechanic.JPG" alt="I'm
+              a mechanic" width="325" height="432">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <img src="KINISI/bajaPPD.jpg" alt="our project during
+              project presentation day" width="609" height="457">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <img src="KINISI/Scope.jpg" alt="probing signals in the
+              embedded system to check noise" width="348" height="463"><br>
+          </div>
+          <br>
+        </article>
+      </section>
+      <hr>
+      <!-- Soft-Eng -->
+      <section>
+        <h3> Software Engineering Project </h3>
+        <article> I was part of a ten-person student team working in a
+          class competition to apply Agile development methodologies and
+          software design patterns in Java to create (1) an online
+          alcohol label submission form for manufacturers, (2) a form
+          processing workflow application for US Treasury agents in the
+          Alcohol and Tobacco Tax &amp; Trade Bureau (TTB), and (3) an
+          alcohol beverage search engine for the general public. The
+          software systems we created were to inform the TTB about
+          potential features, user interfaces, and design approaches
+          that they might consider implementing. <br>
+          <br>
+          As a software engineer, I helped gather software requirements
+          by creating surveys and interviews, and brainstorming with the
+          team, as well as creating user stories, scenarios and
+          storyboards. I was responsible for implementing the "special
+          feature" components of the application, that set our team
+          apart from other teams in the class. I implemented security
+          features, as well as some time-saving features like showing
+          changes (similar to git-diff) to the agents so that they would
+          not have to review the application entirely again. I also
+          implemented some hardware features such as RFID login, and
+          some CV features using the Tesseract OCR to read alcohol
+          labels.<br>
+          <br>
+          <div align="center"><img src="Soft-Eng/main_page.PNG"
+              alt="main_page_of_UI" width="389" height="242">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <img src="Soft-Eng/RFID_Scanner.PNG" alt="the RFID scanner I
+              implemented for the project" width="181" height="238"><br>
+          </div>
+          <br>
+        </article>
+      </section>
+      <hr>
+      <!-- RBE 3002 -->
+      <section>
+        <h3> Autonomous Robot Navigation Project</h3>
+        <article> As part of WPI's undergraduate robotics curriculum, I
+          took a robotics class covering autonomous robot navigation
+          using SLAM and the Robot Operating System (ROS) to program the
+          robot to map and explore a maze. This class entailed
+          demonstrating correct implementation of robot control,
+          occupancy grid "padding", and the A* search algorithm to
+          autonomously navigate around obstacles. Feel free to view the
+          final report <a
+            href="RBE3002/RBE%203002%20Final%20Report.pdf">here</a>.<br>
+          <br>
+          <div align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img
+              src="RBE3002/Exploration.PNG" alt="robot is exploring the
+              map" width="331" height="276">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <img src="RBE3002/A_Star_Path_Found.PNG" alt="path to goal
+              found using A*" width="374" height="274"><br>
+          </div>
+        </article>
+      </section>
+      <hr>
+      <!-- RBE 3001 -->
+      <section>
+        <h3> Robot Manipulation Project</h3>
+        <article> As part of a three person team, I've helped program 3
+          Degree of Freedom arms to accomplish a sorting task using
+          computer vision and MATLAB, to show what the robot is seeing,
+          and to plot the robot’s motion in real time. This was my first
+          real introduction to forward and inverse position and velocity
+          kinematics, as well as PID. The goal of this project was to
+          have the robot arm pick up objects of different color and
+          weight, and sort them accordingly. On one side it would place
+          light objects, and on the other, it would place heavy objects.
+          Each color on each side had its own place. I had a lot of fun
+          making this silly video of it working as well! Feel free to
+          view the final report <a href="RBE3001/Final%20Report.pdf">here</a>.<br>
+          <br>
+          <div align="center"><img src="RBE3001/arm_no_orbs.PNG"
+              alt="3DOF arm without the orbs" width="410" height="309">&nbsp;&nbsp;&nbsp;
+
+
+            <img src="RBE3001/arm_with_orbs.PNG" alt="arm with the orbs"
+              width="475" height="310"><br>
+          </div>
+        </article>
+      </section>
+      <hr>
+      <!-- AI Proj -->
+      <section>
+        <h3> Real Time Tennis Match Prediction using Machine Learning</h3>
+        <article> Being the avid tennis lover that I am, I worked on a
+          team to create a program to predict the outcome of tennis
+          matches before the match using Logistic Regression. It was
+          74.5% correct out of 2801 matches before the match had even
+          begun. We then updated prediction throughout the match using
+          SVM. The merged algorithms yielded 76% correct predictions
+          before 50% of the match was complete, and was 97.2% correct by
+          the end. This program was able to actually predict some
+          serious upsets in the ATP Nitto Finals tournament! Feel free
+          to view the final report <a
+href="AI_Proj/Real%20Time%20Tennis%20Match%20Prediction%20using%20Machine%20learning.pdf">here</a>.<br>
+          <br>
+          <div align="center"><img
+              src="AI_Proj/totalMatchesBarGraph.PNG" alt="bar graph of
+              when the AI engine correctly predicted the end result of
+              the match" width="440" height="330"><br>
+          </div>
+        </article>
+      </section>
+      <hr>
+      <!-- Path Planning Visualizer -->
+      <section>
+        <h3> Path Planning Visualizer</h3>
+        <article> I had an assignment to implement a few search
+          algorithms for my Motion Planning class, but having finished a
+          bit early, I decided to make an interface that visualizes the
+          algorithms finding the path from start to finish, and also
+          added the ability to drop obstacles in the world. As of right
+          now, the algorithms it can do are: BFS, DFS, Dijkstra's, A*,
+          and Weighted A*, but I would like to at RRT and some other
+          sample based path planning algorithms in the future! You can
+          find the code on my <a
+            href="https://github.com/gentov/RBE550-SearchAlgorithms">GitHub</a>.
+          Let me know if you have ideas for new features! <br>
+          <br>
+          <div align="center"><img
+              src="PathPlanningVisualizer/WA_Star.gif" alt="WA* Gif of
+              visualization" width="456" height="323">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+            <img src="PathPlanningVisualizer/Dijkstra's.gif"
+              alt="Dijkstra's Algorithm Visualization" width="452"
+              height="320"><br>
+          </div>
+        </article>
+      </section>
+      <hr>
+      <!-- AI Parking -->
+      <section>
+        <h3> Park My Car </h3>
+        <article> After taking a class on Artificial Intelligence, I was
+          pretty blown away, and so in the break between semesters, I
+          wrote a small program to visualize the genetic algorithm when
+          applied to a car learning to park in a parking space. How much
+          a car is rewarded depends on how close it is to the parking
+          spot, as well as how well it is oriented, and whether or not
+          it hit the two cars on either side of the parking spot.
+          Eventually, I want to improve the program with a neural
+          network. You can find the code here {INSERT LINK HERE]. It's
+          still very much a work in progress, with images coming soon! </article>
+      </section>
+      <hr>
+      <!-- IQP -->
+      <section>
+        <h3> A Greener Venice: The Inventory and Reutilization of Green
+          Spaces on the Giudecca Island </h3>
+        <article> I was lucky enough to do my study abroad in Venice,
+          Italy, where I worked on a team of four to asses the
+          under-utilized land on the Giudecca Island in Italy. Our study
+          identified and classified green spaces on the island, we
+          developed a methodology to classify each of the green spaces
+          as an Urban Wild, Park, Private Garden, or Farmland, and
+          proposed options for reutilization. This methodology can be
+          implemented in other parts of Venice or its Lagoon. If
+          implemented, our recommendations for reutilization on Giudecca
+          would increase usable land by 31%, ultimately making for a
+          more sustainable and greener Venice. In order for other
+          researchers to continue our work, I developed a QGIS plug-in
+          that classified the best way to re-utilize the unused land (at
+          least according to our methodologies). We also made a google
+          map of our findings <a
+href="https://www.google.com/maps/d/u/0/viewer?mid=1UQtf_PNb2WatsaPu77Qmq3e8wrK5xxjE&amp;ll=45.428233737362454%2C12.326700999999957&amp;z=15">here</a>.
+          The whole project website is <a
+            href="https://sites.google.com/site/ve17greenteam/">here.</a><br>
+          <br>
+          <div align="center"><img src="Venice/droneFlying.PNG" alt="me
+              flying a drone to survey some land" width="390"
+              height="318">&nbsp;&nbsp;&nbsp; <img
+              src="Venice/coversionOfLand.PNG" alt="some cool graphics
+              showing what impact we could have" width="587"
+              height="206">&nbsp;&nbsp;&nbsp; <img
+              src="Venice/QGIS.PNG" alt="QGIS Plugin" width="464"
+              height="364"><br>
+          </div>
+          <br>
+        </article>
+      </section>
+      <hr>
+      <!-- Left: RBE2002, RBE2001, IdEAS 
+	  
+		  <section>
+			<article> </article>
+		  </section>
+		  <hr>
+
+		  <section>
+			<article> </article>
+		  </section>
+		  <hr>
+
+		  <section>
+			<article> </article>
+		  </section>
+		  <hr> --&gt; 
+		  --> </main>
+    <footer> </footer>
+  </body>
+</html>
